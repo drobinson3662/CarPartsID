@@ -36,7 +36,7 @@ def load_data(base_dir, img_size=(224, 224), batch_size=32):
         batch_size=batch_size,
         class_mode='categorical'
     )
-    print("Class indices:", train_generator.class_indices)
+    # print("Class indices:", train_generator.class_indices)
     return train_generator, validation_generator, test_generator
 
 if __name__ == '__main__':
@@ -44,8 +44,8 @@ if __name__ == '__main__':
     img_size = (224, 224)
     batch_size = 32
     train_generator, validation_generator, test_generator = load_data(base_dir, img_size, batch_size)
-    for data_batch, labels_batch in train_generator:
-        print("data batch shape:", data_batch.shape)
-        print("labels batch shape:", labels_batch.shape)
-        print("first labels batch:", labels_batch[0])
-        break
+    # for data_batch, labels_batch in train_generator:
+    #     print("data batch shape:", data_batch.shape)
+    #     print("labels batch shape:", labels_batch.shape)
+    #     print("first labels batch:", labels_batch[0])
+    #     break
